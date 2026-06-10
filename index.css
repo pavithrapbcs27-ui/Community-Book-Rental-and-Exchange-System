@@ -1,0 +1,613 @@
+/* General Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #ffffff; /* white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Start Page */
+.start {
+  text-align: center;
+  background: #f9f9f9; /* light card background */
+  padding: 50px 80px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.start h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.start button {
+  padding: 15px 35px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  background: #2575fc;
+  transition: 0.3s;
+}
+
+.start button:hover {
+  background: #6a11cb;
+  transform: translateY(-3px);
+}
+
+/* Forms (Login/Register) */
+form {
+  background: #ffffff; /* white form */
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+form h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+form input:focus, form select:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #2575fc; /* solid blue */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #6a11cb; /* hover effect */
+  transform: translateY(-2px);
+}
+
+form p {
+  margin-top: 15px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Gender Radio Buttons */
+.gender label {
+  margin: 0 10px;
+  font-weight: normal;   /* remove bold */
+  font-size: 1rem;       /* same size as inputs */
+}
+
+
+/* Dashboard */
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff; /* white dashboard */
+  color: #333;
+  text-align: center;
+  font-size: 2rem;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  form, .start {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
+.gender {
+  display: flex;       /* single line */
+  gap: 20px;           /* space between Male and Female */
+  align-items: center; /* vertical alignment */
+  margin: 8px 0;       /* spacing from other inputs */
+}
+
+.gender input[type="radio"] {
+  margin-right: 5px;   /* space between radio and label text */
+}
+
+.login-link {
+  color: #2575fc;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.login-link:hover {
+  color: #6a11cb;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: #ffffff; /* white dashboard */
+}
+
+/* Sidebar buttons inside dashboard */
+/* Sidebar fixed to left */
+.sidebar {
+  position: fixed;       /* stick to left */
+  top: 0;                /* start from top */
+  left: 0;               /* align to left */
+  height: 100vh;         /* full viewport height */
+  width: 200px;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+  z-index: 1000;         /* stay above content */
+}
+
+/* Adjust main content to not go under sidebar */
+.dashboard-content {
+  margin-left: 220px;    /* same as sidebar width + padding */
+  padding: 50px;
+  text-align: center;
+}
+
+
+.sidebar button {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #2575fc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background: #6a11cb;
+}
+
+.search-input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 250px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.interactive-table th { cursor: pointer; }
+.interactive-table tr:hover { background: #f0f0f0; }
+.add-book-form input, .add-book-form select, .add-book-form button { margin:5px 0; padding:8px; border-radius:5px; width:200px; }
+.add-book-form button { background:#0077cc; color:#fff; border:none; cursor:pointer; }
+.add-book-form button:hover { background:#005fa3; }
+.search-input { margin-bottom:10px; padding:6px; border-radius:5px; width:250px; }
+/* Full-screen background with a friendly illustration */
+.landing-hero {
+  height: 100vh;
+  width: 100vw;
+  background: url("https://images.unsplash.com/photo-1596496052040-25c9186b89ab?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Overlay for readability */
+.overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 60px 80px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+.title span {
+  color: #333;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Buttons style */
+.btn {
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: skyblue;  /* Both buttons sky blue */
+  color: white;
+}
+
+/* Remove hover animations */
+.btn:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .overlay { padding: 40px 25px; }
+  .title { font-size: 2rem; }
+  .subtitle { font-size: 1rem; }
+  .btn { font-size: 1rem; padding: 10px 25px; }
+}
+
+/* ================= Dashboard Container ================= */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  gap: 15px; /* gap between sidebar and content */
+  background-color: #f5f7fb;
+  overflow: hidden;
+}
+
+/* ================= Sidebar ================= */
+.sidebar {
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+  flex-shrink: 0; /* prevent shrinking */
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  border-right: 1px solid #ddd; /* subtle separation */
+}
+
+/* Main sidebar buttons */
+.sidebar button {
+  padding: 10px 15px;
+  font-size: 16px;
+  text-align: left;
+  border: none;
+  background: #00aaff;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+  background: #0091dd;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar section titles */
+.sidebar-section {
+  font-weight: 700;
+  margin-top: 15px;
+  padding: 10px 5px;
+  color: #333;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Dropdown container for sub-buttons */
+.dropdown-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 12px;
+  margin-top: 5px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Sub-buttons */
+.dropdown-buttons button {
+  background: #cceeff;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-buttons button:hover {
+  background: #99ddff;
+  color: #222;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= Right-side Content ================= */
+.dashboard-content {
+  flex: 1;
+  padding: 125px;
+  overflow-y: auto;
+  background-color: #f5f7fb;
+  min-width: 0; /* important for proper flex shrink */
+}
+
+/* Search input */
+.dashboard-content input[type="text"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+.dashboard-content input[type="text"]:focus {
+  outline: none;
+  border-color: #00aaff;
+  box-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+}
+
+/* Section headings */
+.dashboard-content h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.dashboard-content h3 {
+  margin: 15px 0 10px 0;
+  color: #555;
+}
+
+/* ================= Book Cards ================= */
+.book-card {
+  flex: 0 0 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Book card buttons */
+.book-card button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-card button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.rent-btn {
+  background: #00cc88;
+  color: white;
+}
+
+.rent-btn:hover:enabled {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exchange-btn {
+  background: #ffaa00;
+  color: white;
+}
+
+.exchange-btn:hover:enabled {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= Responsive ================= */
+@media(max-width: 768px){
+  .dashboard-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 5px;
+    padding: 10px;
+  }
+  
+  .sidebar button, .dropdown-buttons button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .book-card {
+    flex: 0 0 45%;
+  }
+}
+
+@media(max-width:480px){
+  .book-card {
+    flex: 0 0 100%;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #f5f5f5; /* light gray, matches the page */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar button {
+  background: #3b82f6; /* button color can stay */
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background: #2563eb;
+}
+
+/* Container Layout */
+.profile-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Profile Card */
+.profile-card {
+  flex: 1;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 12px rgba(0,0,0,0.1);
+}
+
+.profile-header h2 {
+  margin: 0;
+  color: #1e3a8a;
+}
+
+.profile-header p {
+  margin: 5px 0 15px 0;
+  color: #3b82f6;
+}
+
+/* Profile Details */
+.profile-details p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* Edit Button */
+.profile-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.edit-btn {
+  padding: 10px 20px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #047857;
+}
+
+/* Rent & Exchange Buttons inside dropdown */
+.dropdown-buttons .btn-rent,
+.dropdown-buttons .btn-exchange {
+  background: linear-gradient(90deg, #7ed6ff, #4fc3f7);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(79, 195, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.dropdown-buttons .btn-rent:hover,
+.dropdown-buttons .btn-exchange:hover {
+  background: linear-gradient(90deg, #4fc3f7, #7ed6ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(79, 195, 247, 0.5);
+}
+
+/* Optional: Add different shades if you want them distinct */
+.dropdown-buttons .btn-rent {
+  background: linear-gradient(90deg, #76e4ff, #42a5f5);
+}
+
+.dropdown-buttons .btn-exchange {
+  background: linear-gradient(90deg, #5cd4ff, #2196f3);
+}
